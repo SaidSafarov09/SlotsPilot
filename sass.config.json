@@ -1,0 +1,21 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+      "outDir": "./dist/css",
+      "target": "ES5",
+      "module": "commonjs",
+      "sourceMap": true,
+      "noImplicitAny": false,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "strictNullChecks": true,
+      "strictFunctionTypes": true,
+      "strictPropertyInitialization": true,
+      "strictBindCallApply": true,
+      "noImplicitThis": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "forceConsistentCasingInFileNames": true,
+      "esModuleInterop": true 
+    }
+  }

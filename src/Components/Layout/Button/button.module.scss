@@ -1,0 +1,18 @@
+@import "../../../media-queries.scss";
+.btn {
+  color: #fff;
+  border: none;
+  border-radius: 0px 12px 12px 12px;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  display: none;
+  @include tablet {
+    display: block;
+    padding: 12px 20px;
+  }
+}
+
+$primary-color: linear-gradient(108deg, #04da8d 0%, #00b67a 100%);
+$secondary-color: #282645;
+$dark-color: #292929;

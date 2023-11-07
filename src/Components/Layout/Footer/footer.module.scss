@@ -1,0 +1,95 @@
+@import "../../../media-queries.scss";
+
+.Footer {
+  width: 100%;
+  background: #151326;
+  box-sizing: border-box;
+  @include desktop {
+    padding: 36px 160px;
+  }
+  @include large-desktop {
+    padding: 36px 362px;
+  }
+  .linksAndSub {
+    width: 100%;
+    display: flex;
+    .links {
+      width: 100%;
+      .linksContent {
+        display: flex;
+        width: 100%;
+        div:nth-child(2) {
+          padding: 0 80px;
+        }
+        p {
+          font-size: 12px;
+          text-transform: uppercase;
+          font-weight: normal;
+          line-height: 18px;
+          color: #737eb2;
+          font-weight: 700;
+          padding-bottom: 24px;
+        }
+        li {
+          padding-top: 10px;
+          &:first-child {
+            padding: 0;
+          }
+        }
+        a {
+          font-size: 14px;
+          color: #fff;
+          font-weight: 500;
+          text-decoration: none;
+          line-height: 20px;
+          &:hover {
+            color: #00b67a;
+          }
+        }
+      }
+    }
+    .subscribe {
+      width: 100%;
+      p {
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .subscribeInput {
+        display: flex;
+        padding: 18px 0;
+        .textField {
+          background: #211f3a;
+          border-radius: 12px;
+          width: 225px;
+          height: 45px;
+          margin-right: 10px;
+          label {
+            color: #737eb2;
+            display: flex;
+            align-items: flex-start;
+            font-size: 14px;
+            line-height: normal;
+          }
+          input:focus {
+            outline: none;
+          }
+        }
+      }
+      span {
+        color: #3f3a79;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+      }
+    }
+  }
+  .ligal {
+    color: #3f3a79;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 32px 0;
+  }
+}

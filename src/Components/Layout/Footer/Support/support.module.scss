@@ -1,0 +1,44 @@
+.supportContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .socialLinks {
+    display: flex;
+    align-items: center;
+    .socialBrands {
+      display: flex;
+      img {
+        padding-right: 10px;
+      }
+    }
+    .socialEmail {
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      .line {
+        width: 1px;
+        height: 10px;
+        background: #3f3a79;
+      }
+      .Email {
+        display: flex;
+        align-items: center;
+        color: #3f3a79;
+        font-size: 12px;
+        font-weight: 500;
+        span {
+          color: #00b67a;
+        }
+      }
+    }
+  }
+  .brandName {
+    color: #3f3a79;
+    font-size: 12px;
+    font-weight: 500;
+    a {
+      text-decoration: none;
+      color: #3f3a79;
+    }
+  }
+}
