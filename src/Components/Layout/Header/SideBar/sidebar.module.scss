@@ -1,0 +1,68 @@
+.Sidebar {
+  height: 100%;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  background: #171529;
+  z-index: 9999;
+  .dashed {
+    display: flex;
+    justify-content: end;
+    background: #171529;
+  }
+}
+.SideBarProvider {
+  width: 194px;
+  height: 100%;
+  background: #171529;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 14px;
+  h1 {
+    font-size: 12px;
+    color: #cfd8ff;
+    padding: 16px 0 12px 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    svg {
+      padding-left: 4px;
+    }
+  }
+  .lineContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    padding: 6px;
+    &:hover {
+      background: #1e1b36;
+      border-radius: 6px;
+    }
+    .brandName {
+      display: flex;
+      align-items: center;
+      h3 {
+        font-size: 12px;
+        color: #fff;
+        padding-left: 6px;
+      }
+      .brandItems {
+        padding-left: 14px;
+      }
+      img {
+        width: 42px;
+        height: 23px;
+        border-radius: 6px;
+      }
+    }
+    .leftContent {
+      color: #fff;
+      font-size: 11px;
+      background: #363168;
+      padding: 4px;
+      border-radius: 6px;
+    }
+  }
+}

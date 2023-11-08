@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, useEffect, useState } from "react";
 import styles from "./header.module.scss";
 import { Logo } from "./img/Logo";
 import { Burger } from "./img/Burger";
@@ -9,13 +9,42 @@ import { useMediaQuery } from "@mui/material";
 import { Afganistan } from "./img/Afganistan";
 import { Profile } from "./img/Profile";
 import { SearchImg } from "./img/SearchImg";
+import { SideBar } from "./SideBar/SideBar";
 
 export const Header: React.FC<PropsWithChildren> = ({}) => {
+  const [showMenu, setShowMenu] = useState(true);
+
+  useEffect(() => {
+    const checkResolution = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 1600) {
+        setShowMenu(true);
+      } else {
+        setShowMenu(false);
+      }
+    };
+
+    checkResolution();
+    window.addEventListener("resize", checkResolution);
+
+    return () => {
+      window.removeEventListener("resize", checkResolution);
+    };
+  }, []);
+
+  const toggleMenu = () => {
+    setShowMenu((prev) => !prev);
+  };
+
   const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div className={styles.Header}>
       <div className={styles.burgerLogo}>
-        {!isMobile && <Burger />}
+        {!isMobile && (
+          <button onClick={toggleMenu}>
+            <Burger />
+          </button>
+        )}
         <div className={styles.logo}>
           <Logo />
         </div>
@@ -49,6 +78,12 @@ export const Header: React.FC<PropsWithChildren> = ({}) => {
           <div className={styles.chat}>
             <Chat />
           </div>
+
+          {showMenu && (
+            <div className={styles.leftMenu}>
+              <SideBar />
+            </div>
+          )}
         </div>
       )}
     </div>

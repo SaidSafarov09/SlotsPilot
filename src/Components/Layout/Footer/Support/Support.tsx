@@ -4,8 +4,10 @@ import discord from "./img/discord.png";
 import tg from "./img/tg.png";
 import twitter from "./img/twitter.png";
 import youtube from "./img/youtube.png";
+import { useMediaQuery } from "@mui/material";
 
 export const Support = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)"); 
   return (
     <div className={styles.supportContent}>
       <div className={styles.socialLinks}>
@@ -38,6 +40,7 @@ export const Support = () => {
           &nbsp;
           <div className={styles.line}></div>
           &nbsp;
+          {isMobile ? (<br/>) : (<></>)}
           <div className={styles.Email}>
             <p>Press</p>&nbsp;
             <span>press@slotspilot.com</span>

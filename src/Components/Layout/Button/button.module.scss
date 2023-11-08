@@ -6,11 +6,7 @@
   font-size: 14px;
   font-family: "Inter", sans-serif;
   cursor: pointer;
-  display: none;
-  @include tablet {
-    display: block;
-    padding: 12px 20px;
-  }
+  padding: 12px 20px;
 }
 
 $primary-color: linear-gradient(108deg, #04da8d 0%, #00b67a 100%);

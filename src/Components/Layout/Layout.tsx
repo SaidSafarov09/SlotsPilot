@@ -17,7 +17,7 @@ export const Layout: React.FC<PropsWithChildren<LayoutProps>> = ({
   const asd = "dsds";
   return (
     <div className={styles.layout}>
-      {header && <Header />}
+      {header && <Header  />}
       <div className={styles.content}>{children}</div>
       {footer && <Footer />}
     </div>

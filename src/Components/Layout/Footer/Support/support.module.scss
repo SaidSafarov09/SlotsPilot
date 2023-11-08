@@ -2,9 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
   .socialLinks {
     display: flex;
     align-items: center;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
     .socialBrands {
       display: flex;
       img {
@@ -15,6 +21,14 @@
       display: flex;
       align-items: center;
       padding-left: 8px;
+      text-align: center;
+      @media (max-width: 1024px) {
+        padding: 16px 0;
+        justify-content: center;
+      }
+      @media (max-width: 600px) {
+        flex-wrap: wrap;
+      }
       .line {
         width: 1px;
         height: 10px;
@@ -26,6 +40,9 @@
         color: #3f3a79;
         font-size: 12px;
         font-weight: 500;
+        @media (max-width: 600px) {
+          font-size: 11px;
+        }
         span {
           color: #00b67a;
         }
